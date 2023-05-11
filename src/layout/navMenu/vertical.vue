@@ -2,12 +2,15 @@
 	<el-menu
 		router
 		:default-active="defaultActive"
-		background-color="transparent"
+		text-color="#3B424A"
+        active-text-color="#fff"
+        background-color="#fff"
 		:collapse="isCollapse"
 		:unique-opened="getThemeConfig.isUniqueOpened"
 		:collapse-transition="false"
 	>
-		<template v-for="val in menuLists">
+		<template v-for="(val,valindex) in menuLists" :key="valindex">
+			<div class="miaoshu" v-if="valindex%4==0">基础服务</div>
 			<el-sub-menu :index="val.path" v-if="val.children && val.children.length > 0" :key="val.path">
 				<template #title>
 					<SvgIcon :name="val.meta.icon" />
@@ -57,6 +60,8 @@ export default defineComponent({
 		});
 		// 获取父级菜单数据
 		const menuLists = computed(() => {
+			console.log(props.menuList)
+			
 			return <any>props.menuList;
 		});
 		// 获取布局配置信息
@@ -99,3 +104,11 @@ export default defineComponent({
 	},
 });
 </script>
+<style scoped>
+.miaoshu{
+    color: #7B8190;
+    padding:3px;
+    padding-left: 20px;
+    font-size: 13px;
+}
+</style>

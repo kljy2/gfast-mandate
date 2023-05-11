@@ -43,13 +43,15 @@ export default defineComponent({
 <style scoped lang="scss">
 .layout-logo {
 	width: 220px;
-	height: 50px;
+	// height: 50px;
 	display: flex;
+	padding: 20px 0;
 	align-items: center;
 	justify-content: center;
 	box-shadow: rgb(0 21 41 / 2%) 0px 1px 4px;
 	color: var(--el-color-primary);
-	font-size: 16px;
+	font-size: 25px;
+	font-weight: 900;
 	cursor: pointer;
 	animation: logoAnimation 0.3s ease-in-out;
 	span {
