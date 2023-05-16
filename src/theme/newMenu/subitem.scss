@@ -1,0 +1,28 @@
+
+  .el-menu-item.second-menuitem {
+    height: 48px;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: none;
+    padding-left: 12px !important;
+    a{
+      color: #3B424A;
+      text-decoration: none;
+      height: 48px;
+      line-height: 48px;
+    }
+  }
+  .el-menu-item.is-active,
+  .el-menu-item.is-active a,
+  :deep(.el-sub-menu:not(.is-opened):hover .el-sub-menu__title),
+  .el-menu-item:hover,
+  .el-menu-item:hover a{
+    background-color: #7364FF !important;
+    color: #fff !important;
+  }
+  .el-sub-menu+.el-menu-item,
+  .el-sub-menu+.el-sub-menu,
+  .el-menu-item+.el-menu-item,
+  .el-menu-item+.el-sub-menu{
+    margin-top: 8px;
+  }

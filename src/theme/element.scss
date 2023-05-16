@@ -69,22 +69,41 @@
 .el-menu-hover-bg-color {
 	background-color: #7364FF !important;
 	color: #fff !important;
+	border-radius: 10px;
 }
 // 默认样式修改
 .el-menu {
 	border-right: none !important;
-	width: 220px;
+	max-width: 220px;
+
+	padding: 0 15px;
+}
+.el-sub-menu__title+.el-menu{
+	padding-right: 0 !important;
+	.el-menu-item.is-active{
+		padding-left: 15px !important;
+	}
 }
 .el-menu-item {
 	height:45px !important;
 	line-height: 45px !important;
 }
+.el-sub-menu .el-menu{
+	padding-left: 15px;
+	padding-right: 15px;
+}
 .el-menu-item,   //子菜单选中样式
 .el-sub-menu__title {
 	height: 45px;
-
 	color: #3B424A;
 }
+.el-sub-menu__title{
+	padding-left: 15px !important;
+}
+.el-menu--vertical:not(.el-menu--collapse):not(.el-menu--popup-container) .el-menu-item:not(.hsouye){
+	padding-left: 0;
+}
+
 // 修复点击左侧菜单折叠再展开时，宽度不跟随问题
 .el-menu--collapse {
 	width: 64px !important;
@@ -117,6 +136,7 @@
 .el-menu-item:hover{
 	background-color: #7364FF !important;
 	color: #fff;
+	border-radius: 10px;
 
 }
 // 子级菜单背景颜色

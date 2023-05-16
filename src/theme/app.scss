@@ -40,6 +40,15 @@ body,
 	overflow: hidden;
 	position: relative;
 }
+.el-menu.el-menu--inline{
+  padding-left: 30px;
+}
+.el-icon{
+	vertical-align: middle;
+	margin-right: 5px;
+	width: var(--el-menu-icon-width);
+	text-align: center;
+}
 
 /* 主布局样式
 ------------------------------- */
@@ -85,7 +94,8 @@ body,
 	}
 	// pc端左侧导航样式
 	.layout-aside-pc-220 {
-		width: 220px !important;
+		// width: 100% !important;
+		width: 230px;
 		transition: width 0.3s ease;
 	}
 	.layout-aside-pc-64 {

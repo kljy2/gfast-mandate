@@ -5,7 +5,7 @@
 	<div v-else-if="isShowIconImg" :style="setIconImgOutStyle">
 		<img :src="getIconName" :style="setIconSvgInsStyle" />
 	</div>
-	<i v-else :class="getIconName" :style="setIconSvgStyle" />
+	<i v-else :class="getIconName" class="el-icon" :style="setIconSvgStyle" />
 </template>
 
 <script lang="ts">

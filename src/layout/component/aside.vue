@@ -54,7 +54,7 @@ export default defineComponent({
 					closeLayoutAsideMobileMode();
 					return [asideBrColor, 'layout-aside-mobile', 'layout-aside-mobile-close'];
 				}
-			} else {
+			} else if(state.clientWidth <= 2000) {
 				if (layout === 'columns') {
 					// 分栏布局，菜单收起时宽度给 1px
 					if (isCollapse) return [asideBrColor, 'layout-aside-pc-1'];
